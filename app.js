@@ -32,5 +32,4 @@ console.log("Database connected");
 
 //start server
 app.listen(3000);
-
 console.log("Server listeneing on port 3000");
