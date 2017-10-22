@@ -27,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/users', userRoutes);
 
 //conect the database
-mongoose.connect('mongodb://localhost:27017/ea',  { useMongoClient: true });
+mongoose.connect('mongodb://mongo:27017/ea',  { useMongoClient: true });
 console.log("Database connected");
 
 //start server
