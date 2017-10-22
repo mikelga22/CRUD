@@ -18,6 +18,7 @@ router.post('/add', users.insertUser);
 //UPDATE REQUESTS
 //update user by id
 router.post('/:userId', users.updateUser);
+router.post('/push/:userId', users.updateUserArray);
 
 //DELETE REQUESTS
 //delete user by id

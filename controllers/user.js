@@ -6,7 +6,6 @@ exports.listAllUsers = function(req, res) {
     User.find({}, function(err, users) {
         if (err)
             res.send(err);
-        console.log(users);
         res.json(users);
     });
 };
@@ -33,7 +32,15 @@ exports.insertUser = function(req, res) {
 
 //update methods
 exports.updateUser = function(req, res) {
-    User.findOneAndUpdate({_id:req.params.userId}, req.body, {new: true}, function(err, user) {
+    User.findOneAndUpdate({_id:req.params.userId}, {$addToSet:req.body}, {new: true}, function(err, user) {
+        if (err)
+            res.send(err);
+        res.json(user);
+    });
+};
+
+exports.updateUserArray = function(req, res) {
+    User.findOneAndUpdate({_id:req.params.userId}, {$push: {comments: req.body.comments}}, {new: true}, function(err, user) {
         if (err)
             res.send(err);
         res.json(user);
