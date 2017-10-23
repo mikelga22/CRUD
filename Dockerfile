@@ -1,7 +1,6 @@
 FROM node:alpine
 
-RUN mkdir /CRUD
-WORKDIR /CRUD
-ADD . /CRUD
+RUN mkdir /crud
+WORKDIR /crud
 
 EXPOSE 3000
