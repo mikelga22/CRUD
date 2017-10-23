@@ -5,14 +5,14 @@ services:
      volumes:
          - /data/mongodb/db:/data/db
      ports:
-- "27017:27017"
-		
-  api:
+         - "27017:27017"
+
+   api:
      build: .
      command: node app.js
      volumes:
           - .:/crud
      ports:
-- "3000:3000"
+          - "3000:3000"
      links:
-- mongo
+          - mongo
