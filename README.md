@@ -8,10 +8,9 @@ To test it, follow next steps:
     - Docker and Docker-compose installed
   1. Clone the repository in your pc.
   2. Open a terminal and move to the project's folder.
-  3. nano app.js, and change the line <<app.listen(3000);>> to <<app.listen(3000,"your_ip");>> and save.
-  4. docker-compose build
-  5. docker-compose up
-  6. Now you have the CRUD server running, conected to mongodb
+  3. sudo docker-compose build
+  4. sudo docker-compose up
+  5. Now you have the CRUD server running, conected to mongodb
 
 Links for Docker and Docker-compose isntallation
 
